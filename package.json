@@ -1,23 +1,32 @@
 {
   "name": "script-buddy",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "postinstall": "patch-package"
   },
   "dependencies": {
-    "expo": "~52.0.37",
+    "expo": "^52.0.37",
+    "expo-document-picker": "~13.0.3",
+    "expo-file-system": "~18.0.11",
+    "expo-image-picker": "~16.0.6",
+    "expo-sharing": "~13.0.1",
+    "expo-speech": "~13.0.1",
     "expo-status-bar": "~2.0.1",
-    "react": "18.3.1",
-    "react-native": "0.76.7"
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18.3.1",
+    "react-native": "^0.76.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.20.0",
+    "@babel/plugin-transform-class-static-block": "^7.26.0",
     "@types/react": "~18.3.12",
-    "typescript": "^5.3.3"
+    "patch-package": "^6.5.1",
+    "typescript": "^5.7.3"
   },
   "private": true
 }
